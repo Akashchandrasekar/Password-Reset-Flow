@@ -39,28 +39,7 @@ export const deletePost = async (req, res) => {
   }
 };
 
-// get post
 
-// export const getPost = async (req, res) => {
-//   try {
-//     const page = parseInt(req.query.page) || 1;
-//     const limit = parseInt(req.query.limit) || 10;
-//     const skip = (page - 1) * limit;
-//     const posts = await Post.find()
-//       .populate("user", "name")
-//       .skip(skip)
-//       .limit(limit);
-//     const totalPosts = await Post.countDocuments();
-//     res.status(200).json({
-//       message: "Posts Fetched Successfully",
-//       posts,
-//       totalPages: Math.ceil(totalPosts / limit),
-//       currentPage: page,
-//     });
-//   } catch (error) {
-//     res.status(500).json({ message: error.message });
-//   }
-// };
 
 //without pagination
 export const getPost = async (req, res) => {
